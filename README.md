@@ -1,4 +1,4 @@
-## See some of the projects live!
+## See some of the projects!
 ### [The Wild Oasis Website](https://the-wild-oasis-website-azure.vercel.app/)
 #### [Place Picker](https://place-picker-nine.vercel.app/)  
 #### [Use-Popcorn](https://use-popcorn-nu-six.vercel.app/)
