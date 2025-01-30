@@ -1,0 +1,156 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Rubik Doodle Shadow", system-ui;
+	font-size: 2.4rem;
+	color: #f384aa;
+	background-color: #fef0f4;
+	font-weight: 700;
+}
+
+html {
+	font-size: 62.5%;
+	width: 80rem;
+	margin: 10rem auto;
+	position: relative;
+}
+
+/* .lost {
+	position: absolute;
+	width: 1000vh;
+	height: 115vh;
+	padding-top: 17.5rem;
+	z-index: 4;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	font-size: 12.8rem;
+	font-family: "Yuji Boku";
+	text-align: center;
+	color: #000;
+
+	background-color: red;
+	display: none;
+} */
+
+.grid {
+	display: grid;
+	row-gap: 2.4rem;
+	column-gap: 3.6rem;
+}
+
+.grid--2-cols {
+	grid-template-columns: 1fr 1fr;
+}
+
+.container {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	/* height: 35vh; */
+	grid-template-rows: 1fr 2fr;
+}
+
+.btn {
+	display: inline-block;
+	height: 4.8rem;
+	width: 12.8rem;
+
+	justify-self: start;
+	align-self: start;
+
+	border: none;
+	border-radius: 7px;
+	box-shadow: -2px 2px 5px rgba(243, 132, 171, 0.3);
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.btn:hover {
+	background-color: #fce0ea;
+	/* transform: scale(1.1); */
+	box-shadow: -2px 2px 5px rgba(192, 81, 120, 0.3);
+}
+
+.explanation {
+	justify-self: end;
+	align-self: start;
+}
+
+h1 {
+	grid-column: 1 / -1;
+	align-self: center;
+	justify-self: center;
+	padding-bottom: 6.4rem;
+	font-size: 4.8rem;
+}
+
+.number {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	padding: 1.2rem 2.4rem;
+	background-color: #f384aa;
+	color: #fff;
+	font-size: 4.8rem;
+	border-radius: 11px;
+}
+
+main {
+	font-size: 4.8rem;
+
+	display: flex;
+	justify-content: end;
+	column-gap: 1.6rem;
+
+	padding: 7.2rem 3.2rem 3.2rem 3.2rem;
+	margin: 0 auto;
+	border-top: 5px double #f384aa;
+}
+
+.left {
+	display: grid;
+	width: 35rem;
+}
+
+.guess {
+	display: inline-block;
+	height: 8.4rem;
+	width: 20rem;
+	background: none;
+	border: 4px solid #f384aa;
+	font-family: inherit;
+	color: inherit;
+	font-size: 5rem;
+	padding: 2.5rem 3rem;
+	text-align: center;
+	justify-self: center;
+}
+
+.check {
+	height: 7.2rem;
+	width: 14.4rem;
+	text-align: center;
+	box-shadow: -2px 2px 10px rgba(243, 132, 171, 0.4);
+	justify-self: center;
+}
+
+.right {
+	width: 35rem;
+	display: grid;
+	row-gap: 0;
+}
+
+.message {
+	padding-bottom: 3rem;
+	font-size: 3.2rem;
+}
+
+.label-score,
+.label-highscore {
+	font-size: 2.8rem;
+}

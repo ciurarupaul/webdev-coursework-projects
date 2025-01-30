@@ -1,0 +1,61 @@
+.sidebar {
+	width: 30%;
+	height: 100vh;
+
+	background-color: #16181a;
+	border-radius: 0 8px 0 0;
+
+	color: #fff;
+}
+
+.sidebar span {
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: #dbdcdd;
+}
+
+.sidebar-header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.6rem;
+
+	padding: 5rem 3rem;
+	overflow: hidden;
+}
+
+.addProject {
+	padding: 1rem;
+	border-radius: 6px;
+	border: none;
+	background-color: #3a4046;
+	color: #808589;
+}
+
+.addProject:hover {
+	background-color: #5b6268;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* PROJECTS LIST */
+
+.list-btn {
+	width: 23vw;
+	background-color: #16181a;
+	color: #edeeee;
+	align-content: flex-start;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.list-btn:hover {
+	background-color: #3a4046;
+}
+
+.marg-top {
+	margin-top: 2rem;
+}

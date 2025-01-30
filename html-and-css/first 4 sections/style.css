@@ -1,0 +1,393 @@
+/* diffchecker - compare own code, html validator - see bugs and warnings */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* universal selector - pentru absolut tot ^ (modificat de tot - prioritate minima - orice rule nou il modifica) */
+
+/* PAGE */
+body {
+	color: #444;
+	font-family: sans-serif;
+
+	border-top: 10px solid #1098ad;
+}
+/* gets passed down to children, doar anumite chestii, nu si border ca te ai intepa in gat sa ti puna la fiecare*/
+
+/* h1,
+h2,
+h3,
+h4,
+p,
+li {
+	font-family: sans-serif;
+	color: #444;
+} */
+
+.container {
+	width: 1200px;
+	/* margin-left: auto;
+	 calculated by the browser
+	margin-right: auto; */
+	margin: 0 auto;
+	position: relative;
+}
+
+.main-header {
+	background-color: #f7f7f7;
+	/* padding: 20px;
+	padding-left: 40px;
+	padding-right: 40px; */
+	padding: 20px 40px;
+	/* height: 80px; */
+}
+
+nav {
+	font-size: 18px;
+}
+
+.post-header {
+	margin-bottom: 50px;
+}
+
+aside {
+	background-color: #f7f7f7;
+	border-bottom: 5px solid #1098ad;
+	border-top: 5px solid #1098ad;
+	/* padding-top: 50px;
+	padding-bottom: 50px; 
+	same shit*/
+	padding: 50px 40px;
+	box-sizing: border-box;
+}
+
+/* SMALLER ELEMENTS */
+
+h1,
+h2,
+h3 {
+	color: #1098ad;
+}
+
+h1 {
+	/* color: blue; */
+	/* declaration ^ */
+	font-size: 26px;
+	text-transform: uppercase;
+	font-style: italic;
+}
+/* css rule ^ */
+
+h2 {
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+
+h3 {
+	font-size: 30px;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+h4 {
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+p {
+	font-size: 22px;
+	line-height: 1.5;
+	margin-bottom: 15px;
+}
+
+ul,
+ol {
+	margin-left: 50px;
+	margin-bottom: 30px;
+}
+
+li {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+li:last-child {
+	margin-bottom: 0;
+}
+
+/* select all p elements that are inside a footer; descendent selector */
+footer p {
+	font-size: 16px;
+}
+
+/* article header p {
+	font-style: italic;
+} */
+
+#author {
+	font-style: italic;
+	font-size: 18px;
+}
+
+#copyright {
+	font-size: 16px;
+}
+
+/* ids can only be used once. if you want to reuse a name, use a class */
+
+.related-author {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* ul {
+	list-style: none;
+} */
+
+.related {
+	list-style: none;
+	margin-left: 0;
+}
+
+.main-header {
+	background-color: #f7f7f7;
+}
+
+aside {
+	background-color: #f7f7f7;
+	border-top: 5px solid #1098ad;
+	/* thickness, style, color */
+	border-bottom: 5px solid #1098ad;
+}
+
+/* body {
+	background-color: pink;
+} */
+
+/* .first-li {
+	font-weight: bold;
+} */
+
+li:first-child {
+	font-weight: bold;
+}
+
+li:last-child {
+	font-style: italic;
+}
+
+/* li:nth-child(2) {
+	color: red;
+}
+
+li:nth-child(odd) {
+	color: green;
+} */
+
+/* merge doar daca primul descdendent din article e un p */
+article p:first-child {
+	color: red;
+}
+
+a:link {
+	color: #1098ad;
+	text-decoration: none;
+}
+
+a:visited {
+	/* color: orange; */
+	color: #1098ad;
+}
+a:hover {
+	color: orangered;
+	font-weight: bold;
+	text-decoration: underline dotted orangered;
+}
+a:active {
+	background: black;
+	font-style: italic;
+}
+
+/* always define in this order: link - visited - hover - active */
+
+/* prioritate conflicte: !important la finalul liniei -> intern css (in html) -> id -> class -> element. in caz ca sunt mai multe de highest priority, se alege cea de la final*/
+
+.post-img {
+	width: 100%;
+	/* relative to the size of the parent container */
+	height: auto;
+	/* just in case the dimensions are set in html */
+}
+
+nav a:link {
+	/* background-color: orangered;
+	margin: 20px;
+	padding: 20px;
+	display: block; */
+
+	margin-right: 30px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+nav a:link:last-child {
+	margin-right: 0;
+}
+
+button {
+	font-size: 22px;
+	padding: 20px;
+	cursor: pointer;
+
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+}
+
+h1::first-letter {
+	font-style: normal;
+	margin-right: 5px;
+}
+
+/* h2::first-letter {
+	font-size: 80px;
+} */
+
+h3 + p::first-line {
+	color: red;
+}
+/* doar paragaful adiacent (care urmeaza dupa h3 ca si sibling) */
+
+h2 {
+	/* background-color: orange; */
+	position: relative;
+}
+
+h2::after {
+	content: "TOP";
+	background-color: #ffe70e;
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+	padding: 5px 10px;
+	position: absolute;
+	top: -15px;
+	right: -25px;
+}
+
+/* FLOATS */
+/* .author-img { */
+/* float: left;
+	margin-bottom: 20px;
+}
+
+.author {
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+h1 {
+	float: left;
+}
+
+nav {
+	float: right;
+}
+
+.clearfix::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+article {
+	/* width: 850px;
+	float: left;
+}
+aside {
+	width: 300px;
+	float: right;
+}
+footer {
+	clear: both;
+} */
+
+/* FLEXBOX */
+
+.main-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.author-box {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.author {
+	margin-bottom: 0;
+	margin-left: 15px;
+}
+
+.related-post {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+
+.related-author {
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.related-link:link {
+	font-size: 17px;
+	font-weight: bold;
+	font-style: normal;
+	margin-bottom: 5px;
+	display: block;
+}
+
+/* FLEXBOX LAYOUT */
+
+/* .row {
+	display: flex;
+	align-items: flex-start;
+	gap: 75px;
+	margin-bottom: 60px;
+}
+
+.article {
+	flex: 1;
+	 grow as much as you can 
+	margin-bottom: 0;
+}
+.aside {
+	flex: 0 0 300px;
+} */
+
+/* CSS GRID LAYOUT */
+.container {
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	column-gap: 75px;
+	row-gap: 60px;
+	align-items: start;
+}
+
+.main-header {
+	grid-column: 1 / span 2;
+}
+
+.footer {
+	grid-column: 1 / -1;
+}

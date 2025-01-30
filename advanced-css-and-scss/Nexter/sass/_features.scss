@@ -1,0 +1,30 @@
+.features {
+	grid-column: center-start / center-end;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 6rem;
+
+	margin: 15rem 0;
+}
+
+.feature {
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	row-gap: 1.5rem;
+	column-gap: 2.5rem;
+	align-items: start; //ca sa nu stretch uiasca chestii deampulea (row 1, ca sa acomodeze row 2, care e mai mic la unele cell uri decat la altele)
+
+	&__icon {
+		fill: $color-primary;
+		width: 4.7rem;
+		height: 4.7rem;
+
+		grid-row: 1 / span 2;
+		transform: translateY(-1rem);
+	}
+
+	&__text {
+		font-size: 1.7rem;
+	}
+}

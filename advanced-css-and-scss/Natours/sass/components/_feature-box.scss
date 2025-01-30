@@ -1,0 +1,35 @@
+.feature-box {
+	background-color: rgba($color-white, 0.8);
+	font-size: 1.5rem;
+	padding: 2.5rem;
+	height: fit-content;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+	transition: transform 0.2s;
+
+	@include respond(tab-port) {
+		padding: 2rem;
+		width: 50rem;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	@include respond(phone) {
+		width: 60vw;
+		min-width: 40rem;
+	}
+
+	&__icon {
+		margin: 1rem 0;
+		// stroke: $green-linear-gradient;
+		// nu merge sa atribui un linear-gradient
+		@include respond(tab-port) {
+			margin: 0;
+		}
+	}
+
+	&:hover {
+		transform: translateY(-1.5rem) scale(1.03);
+	}
+}

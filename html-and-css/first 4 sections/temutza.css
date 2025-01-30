@@ -1,0 +1,149 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.container {
+	border: 5px solid #000;
+	width: 900px;
+	margin: 50px auto;
+	position: relative;
+}
+
+h3 {
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #f7f7f7;
+	padding: 15px 0;
+}
+
+.price {
+	font-size: 20px;
+	padding: 10px 0;
+	display: inline-block;
+}
+
+.shipping {
+	text-transform: uppercase;
+	color: #5c5c5c;
+	font-size: 14px;
+	font-weight: bold;
+	float: right;
+	padding-top: 10px;
+}
+
+.description {
+	margin-bottom: 10px;
+}
+
+/* LINK - nu uita de orine: link - visited - hover - active */
+a:link,
+a:visited {
+	color: #000;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
+h4 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	padding-top: 10px;
+}
+
+.list {
+	line-height: 1.5;
+	list-style-type: square;
+	padding: 15px 0px;
+	margin-left: 15px;
+}
+
+.color {
+	background-color: #000;
+	height: 22px;
+	width: 22px;
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.color-blue {
+	background-color: blue;
+}
+
+.color-red {
+	background-color: red;
+}
+
+.color-yellow {
+	background-color: yellow;
+}
+
+.color-green {
+	background-color: green;
+}
+
+.color-brown {
+	background-color: brown;
+}
+
+/* BUTTON */
+.addToCart {
+	background-color: #000;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+	/* devine manuta in loc de sageata, sa te prinzi ca e clickable */
+	width: 100%;
+	padding: 10px 0;
+	border-top: 5px solid #000;
+}
+
+.addToCart:hover {
+	color: #000;
+	background-color: #fff;
+}
+
+.container::after {
+	content: "SALE";
+	background-color: red;
+	color: #fff;
+	padding: 5px 10px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+	letter-spacing: 2px;
+	display: inline-block;
+	position: absolute;
+	top: -15px;
+	left: -32.5px;
+}
+
+/* FLOAT */
+
+.product-image {
+	float: left;
+	/* background-color: red; */
+}
+
+.product-presentation {
+	float: left;
+	width: 250px;
+	margin-left: 40px;
+	/* background-color: lightgreen; */
+}
+
+.product-details {
+	float: left;
+	width: 250px;
+	margin-left: 40px;
+	/* background-color: lightblue; */
+}

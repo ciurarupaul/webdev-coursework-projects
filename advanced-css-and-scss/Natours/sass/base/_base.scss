@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	/* from now on 1 rem = 10 px */
+	// poti sa modifici doar chestia asta in queries si daca tot site ul e built cu rem, scalezi cu un line de cod
+
+	@include respond(tab-land) {
+		font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
+	}
+	// width < 1200
+	@include respond(tab-port) {
+		font-size: 50%; // 1 rem = 8px, 8/16 = 50%
+	}
+	// width < 900 -> trebuie puse asa pentru ierarhie, ca sa se overwrite uiasca style urile
+	@include respond(big-desktop) {
+		font-size: 75%; // 1 rem = 12px, 12/16 = 56.25%
+	}
+}
+
+body {
+	/* e inherited pentru ca in * am pus inherit - better practice */
+	box-sizing: border-box;
+	padding: 3rem;
+
+	@include respond(tab-port) {
+		padding: 0;
+	}
+}
+
+::selection {
+	background-color: $color-primary;
+	color: $color-white;
+}
