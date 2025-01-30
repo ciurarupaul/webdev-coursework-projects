@@ -1,0 +1,11 @@
+## See some of the projects live!
+### [The Wild Oasis Website](https://the-wild-oasis-website-azure.vercel.app/)  
+### [The Wild Oasis Admin](https://the-wild-oasis-admin-iota.vercel.app/login)  
+#### [Place Picker](https://place-picker-nine.vercel.app/)  
+#### [Use-Popcorn](https://vercel.com/ciuraru-pauls-projects/use-popcorn)  
+#### [React Pizza](https://react-pizza-mu-roan.vercel.app/)  
+#### [Countdown Game](https://countdown-game-ruby.vercel.app/)  
+#### [Natours](https://vercel.com/ciuraru-pauls-projects/pig-game)  
+##### [Pig Game](https://vercel.com/ciuraru-pauls-projects/pig-game)  
+##### [Nexter](https://nexter-pied-pi.vercel.app/)  
+##### [Trillo](https://trillo-beryl-kappa.vercel.app/)  
